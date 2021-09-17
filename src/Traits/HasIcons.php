@@ -15,7 +15,7 @@ trait HasIcons
      * @param string $blade_ui_icon_path
      * @return $this
      */
-    public function icon(string $blade_ui_icon_path): static
+    public function icon(string $blade_ui_icon_path): self
     {
         $this->icon = $blade_ui_icon_path;
         $this->hasIcon = true;
@@ -27,7 +27,7 @@ trait HasIcons
      * @param string $blade_file_path
      * @return $this
      */
-    public function tallIcon(string $blade_file_path): static
+    public function tallIcon(string $blade_file_path): self
     {
         $this->tallIcon = $blade_file_path;
         $this->hasIcon = true;
@@ -39,7 +39,7 @@ trait HasIcons
      * @param string $html
      * @return $this
      */
-    public function htmlIcon(string $html): static
+    public function htmlIcon(string $html): self
     {
         $this->htmlIcon = $html;
         $this->hasIcon = true;

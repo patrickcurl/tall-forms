@@ -17,7 +17,7 @@ class Checkboxes extends BaseField
         return $this;
     }
 
-    public function inputAttr(array $attributes): static
+    public function inputAttr(array $attributes): self
     {
         $this->attributes['input'] = $attributes;
         return $this;
