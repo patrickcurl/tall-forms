@@ -3,10 +3,8 @@
 
 namespace Tanthammar\TallForms;
 
-
 class Checkbox extends BaseField
 {
-
     public $placeholder;
 
     protected function overrides(): self
@@ -15,16 +13,15 @@ class Checkbox extends BaseField
         return $this;
     }
 
-    public function placeholder(string $placeholder): self
+    public function placeholder(string $placeholder): static
     {
         $this->placeholder = $placeholder;
         return $this;
     }
 
-    public function inputAttr(array $attributes): self
+    public function inputAttr(array $attributes): static
     {
         $this->attributes['input'] = $attributes;
         return $this;
     }
-
 }

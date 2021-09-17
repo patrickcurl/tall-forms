@@ -3,7 +3,6 @@
 
 namespace Tanthammar\TallForms\Traits;
 
-
 trait HasIcons
 {
     public $icon;
@@ -16,7 +15,7 @@ trait HasIcons
      * @param string $blade_ui_icon_path
      * @return $this
      */
-    public function icon(string $blade_ui_icon_path): self
+    public function icon(string $blade_ui_icon_path): static
     {
         $this->icon = $blade_ui_icon_path;
         $this->hasIcon = true;
@@ -28,7 +27,7 @@ trait HasIcons
      * @param string $blade_file_path
      * @return $this
      */
-    public function tallIcon(string $blade_file_path): self
+    public function tallIcon(string $blade_file_path): static
     {
         $this->tallIcon = $blade_file_path;
         $this->hasIcon = true;
@@ -40,11 +39,10 @@ trait HasIcons
      * @param string $html
      * @return $this
      */
-    public function htmlIcon(string $html): self
+    public function htmlIcon(string $html): static
     {
         $this->htmlIcon = $html;
         $this->hasIcon = true;
         return $this;
     }
-
 }

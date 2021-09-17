@@ -3,13 +3,8 @@
 
 namespace Tanthammar\TallForms;
 
-
 use Illuminate\Support\Str;
-use Tanthammar\TallForms\Traits\HasAttributes;
-use Tanthammar\TallForms\Traits\HasDesign;
 use Tanthammar\TallForms\Traits\HasIcons;
-use Tanthammar\TallForms\Traits\HasSharedProperties;
-use Tanthammar\TallForms\Traits\HasViews;
 
 class DesignElement
 {
@@ -75,5 +70,4 @@ class DesignElement
         $this->colspan = $cols;
         return $this;
     }
-
 }

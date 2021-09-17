@@ -4,11 +4,11 @@ namespace Tanthammar\TallForms;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Tanthammar\TallForms\Traits\HasAttributes;
+use Tanthammar\TallForms\Traits\HasViews;
 use Tanthammar\TallForms\Traits\HasDesign;
 use Tanthammar\TallForms\Traits\HasLabels;
+use Tanthammar\TallForms\Traits\HasAttributes;
 use Tanthammar\TallForms\Traits\HasSharedProperties;
-use Tanthammar\TallForms\Traits\HasViews;
 
 abstract class BaseField
 {
@@ -54,7 +54,7 @@ abstract class BaseField
         return $this->$property;
     }*/
 
-    protected function overrides(): self
+    protected function overrides(): static|self
     {
         return $this;
     }
@@ -70,20 +70,20 @@ abstract class BaseField
      * @param array|string $rules
      * @return $this
      */
-    public function rules($rules): self
+    public function rules($rules): static|self
     {
         $this->rules = $rules;
         return $this;
     }
 
-    public function default($default): self
+    public function default($default): static|static|self
     {
         $this->default = $default;
         return $this;
     }
 
 
-    public function help(string $help): self
+    public function help(string $help): static|static|self
     {
         $this->help = $help;
         return $this;
@@ -95,7 +95,7 @@ abstract class BaseField
      * @param $string
      * @return $this
      */
-    public function errorMsg(string $string): self
+    public function errorMsg(string $string): static|static|self
     {
         $this->errorMsg = $string;
         return $this;
@@ -111,25 +111,25 @@ abstract class BaseField
         return $array;
     }
 
-    public function before(string $text): self
+    public function before(string $text): static|self
     {
         $this->before = $text;
         return $this;
     }
 
-    public function after(string $text): self
+    public function after(string $text): static|self
     {
         $this->after = $text;
         return $this;
     }
 
-    public function above(string $text): self
+    public function above(string $text): static|self
     {
         $this->above = $text;
         return $this;
     }
 
-    public function below(string $text): self
+    public function below(string $text): static|self
     {
         $this->below = $text;
         return $this;

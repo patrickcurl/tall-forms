@@ -3,7 +3,6 @@
 
 namespace Tanthammar\TallForms;
 
-
 use Tanthammar\TallForms\Traits\HasOptions;
 
 class Checkboxes extends BaseField
@@ -18,10 +17,9 @@ class Checkboxes extends BaseField
         return $this;
     }
 
-    public function inputAttr(array $attributes): self
+    public function inputAttr(array $attributes): static
     {
         $this->attributes['input'] = $attributes;
         return $this;
     }
-
 }
