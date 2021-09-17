@@ -76,14 +76,14 @@ abstract class BaseField
         return $this;
     }
 
-    public function default($default): static|static|self
+    public function default($default): static|self
     {
         $this->default = $default;
         return $this;
     }
 
 
-    public function help(string $help): static|static|self
+    public function help(string $help): static|self
     {
         $this->help = $help;
         return $this;
@@ -95,7 +95,7 @@ abstract class BaseField
      * @param $string
      * @return $this
      */
-    public function errorMsg(string $string): static|static|self
+    public function errorMsg(string $string): static|self
     {
         $this->errorMsg = $string;
         return $this;
